@@ -1,0 +1,17 @@
+#NUMBER GUESSING GAME: This game generates a random number between 1 and 100, and then lets the user guess the generated number.
+
+import random
+
+fnumber=random.randint(1,100)
+
+while True:
+  inp=input('Enter a number between 1 and 100')
+  if inp==str(fnumber):
+    print('Congratulations! You guessed the number')
+    break
+  elif int(inp)<fnumber:
+    print('Too low')
+  elif int(inp)>fnumber:
+    print('Too high')
+  else:
+    print('Invalid input')
